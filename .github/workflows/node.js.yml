@@ -35,7 +35,7 @@ jobs:
         git config --global user.name "mukarramion"
         git remote add other-repo https://github.com/vishzzl/FreedomCarz-dev.git
         git checkout -b dev
-        git add dist/*
+        git add -f  dist/*
         git commit -m "Add dist folder"
         git push other-repo dev
     
