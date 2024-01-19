@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="src/output.css">
 </head>
 
-<body class="">
+<body >
     <!-- Nav bar -->
 
 
     <nav class=" top-0 bg-gray-200 shadow shadow-gray-300 w-100 px-8 md:px-auto ">
-        <div class="md:h-16 h-28 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
+        <div class="md:h-16 h-28 mx-auto md:px-4 container flex items-center justify-center md:justify-between flex-wrap md:flex-nowrap">
             <!-- Logo -->
-            <div class="text-indigo-500 md:order-1">
+            <div class="text-primary md:order-1">
                 <!-- Heroicon - Chip Outline -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -27,24 +27,14 @@
                 <ul class="flex font-semibold justify-between">
                     <!-- Active Link = text-indigo-500
                         Inactive Link = hover:text-indigo-500 -->
-                    <li class="md:px-4 md:py-2 text-indigo-500"><a href="#">Dashboard</a></li>
-                    <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">Search</a></li>
-                    <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">Explore</a></li>
-                    <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">About</a></li>
-                    <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">Contact</a></li>
+                    <li class="md:mx-4 md:my-2 md:px-2 text-primary md:border-r-4 border-primary md:text-black"><a href="#">Home</a></li>
+                    <li class="md:mx-4 md:my-2 md:px-2 hover:text-primary transition ease-linear duration-500"><a href="#">Book</a></li>
+                    <li class="md:mx-4 md:my-2 md:px-2 hover:text-primary transition ease-linear duration-500"><a href="#">About</a></li>
+                    <li class="md:mx-4 md:my-2 md:px-2 hover:text-primary transition ease-linear duration-500"><a href="#">Contact</a></li>
                 </ul>
             </div>
             <div class="order-2 md:order-3">
-                <button
-                    class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2">
-                    <!-- Heroicons - Login Solid -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <span>Login</span>
-                </button>
+                
             </div>
         </div>
     </nav>
@@ -72,7 +62,7 @@
                                 We make the car rental experience easy, convenient, and tailored to your needs.</p>
                             <div class="mt-10 flex flex-col items-center md:flex-row">
                                 <a href="#"
-                                    class="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-green-600 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-blue-800 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
+                                    class="bg-primary text-white justify-center text-center rounded-lg shadow px-10 py-3 flex items-center hover:cursor-pointer hover:bg-white hover:border hover:border-primary hover:text-primary transition ease-linear duration-500 mb-5 md:mb-0 mr-5">
                                     View More
                                 </a>
                                 <a href="#" aria-label="" class="group inline-flex items-center font-semibold text-g1">
@@ -239,8 +229,12 @@
                         </a>
 
                     </li>
-                    <li class="col-span-1">
-
+                    <li class="col-span-1 flex justify-center items-center mt-20 lg:mt-0 md:col-span-2 lg:col-span-1">
+                        <div class="flex justify-center">
+                            <div
+                                class="bg-secondary-100 text-secondary-200 btn hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-linear duration-300">
+                                Load more</div>
+                        </div>
                     </li>
                     <!-- <li>
                         
@@ -350,19 +344,19 @@
         <div class="font-body flex justify-center items-center flex-col md:flex-row p-5">
 
             <div class="border-b-2 md:border-b-0 md:border-r-2 p-5 border-gray-600 m-5 flex justify-center items-center flex-col h-40 w-60">
-                <span class="text-rose-500 text-6xl m-2 text-center">100+</span>
+                <span class="text-primary text-6xl m-2 text-center">100+</span>
                 <span class="block text-gray-600 text-xl text-center">Fleet of Cars</span>
             </div>
             <div class="border-b-2 md:border-b-0 md:border-r-2 p-5 border-gray-600 m-5 flex justify-center items-center flex-col h-40 w-60">
-                <span class="text-rose-500 text-6xl m-2 text-center">1k+</span>
+                <span class="text-primary text-6xl m-2 text-center">1k+</span>
                 <span class="block text-gray-600 text-xl text-center">Satisfied Clients</span>
             </div>
             <div class="border-b-2 md:border-b-0 md:border-r-2 p-5 border-gray-600 m-5 flex justify-center items-center flex-col h-40 w-60">
-                <span class="text-rose-500 text-6xl m-2 text-center">3+</span>
+                <span class="text-primary text-6xl m-2 text-center">3+</span>
                 <span class="block text-gray-600 text-xl text-center">Years of Experience</span>
             </div>
             <div class="border-b-2 md:border-b-0 p-5 border-gray-600 m-5 flex justify-center items-center flex-col h-40 w-60">
-                <span class="text-rose-500 text-6xl m-2 text-center">12+</span>
+                <span class="text-primary text-6xl m-2 text-center">12+</span>
                 <span class="block text-gray-600 text-xl text-center">Vehicle Variety</span>
             </div>
         </div>
@@ -402,11 +396,6 @@
                                 undergoes regular inspections.</li>
                         </ul>
                         </p>
-
-                        <a href="#contact-us"
-                            class="mt-8 inline-block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500">
-                            Get in Touch
-                        </a>
                     </div>
                 </div>
             </div>
@@ -422,15 +411,15 @@
                 <div class="flex mt-8 flex-col md:flex-row md:justify-between">
                     <p class="w-full md:w-2/3 text-gray-400">Join Us On This Exciting Journey! Book Your Freedom Car Today And Take The Road Less Traveled!</p>
                     <div class="w-44 pt-6 md:pt-0">
-                        <a class="bg-red-500 justify-center text-center rounded-lg shadow px-10 py-3 flex items-center hover:cursor-pointer hover:bg-gray-100 hover:border hover:border-red-500 hover:text-red-500 transition ease-linear duration-300">Contact US</a>
+                        <a class="bg-primary justify-center text-center rounded-lg shadow px-10 py-3 flex items-center hover:cursor-pointer hover:bg-white hover:border hover:border-primary hover:text-primary transition ease-linear duration-500">Contact US</a>
                     </div>
                 </div>
                 <div class="flex flex-col">
                     <div class="flex mt-24 mb-12 flex-row justify-between">
-                        <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">About</a>
-                        <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">Services</a>
-                        <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">Why us</a>
-                        <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">Contact</a>
+                        <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase transition ease-linear duration-500">About</a>
+                        <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase transition ease-linear duration-500">Services</a>
+                        <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase transition ease-linear duration-500">Why us</a>
+                        <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase transition ease-linear duration-500">Contact</a>
                     </div>
                     <hr class="border-gray-600"/>
                     <p class="w-full text-center my-12 text-gray-600">Copyright © 2024 FreedomCarz</p>
