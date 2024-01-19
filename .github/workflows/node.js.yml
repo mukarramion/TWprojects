@@ -34,7 +34,7 @@ jobs:
       run: |
         git config --global user.email "mukarramion@gmail.com"
         git config --global user.name "mukarramion"
-        git remote add other-repo https:/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@github.com/vishzzl/FreedomCarz-dev.git
+        git remote add other-repo https://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@github.com/vishzzl/FreedomCarz-dev.git
         git checkout -b dev
         git add -f dist/*
         git commit -m "Add dist folder"
