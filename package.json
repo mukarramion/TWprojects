@@ -4,12 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "build-css": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "dev": "npx tailwindcss -i ./main.css -o ./assets/css/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": " npx tailwindcss -i ./src/input.css -o ./src/output.css --minify ",
+    "copy:files": "mkdirp ./dist/images && npx ncp ./images ./dist/images && mkdirp ./dist && npx ncp ./index.html ./dist/index.html && ncp ./src/output.css ./dist/output.css && ncp ./index.js ./dist/index.js",
+    "build": "npm run build:css && npm run copy:files"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cp": "^0.2.0",
+    "mkdirp": "^3.0.1",
+    "ncp": "^2.0.0",
     "tailwindcss": "^3.4.1"
   }
 }
