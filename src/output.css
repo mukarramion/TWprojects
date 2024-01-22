@@ -1797,6 +1797,10 @@ video {
     grid-column: span 1 / span 1;
   }
 
+  .xl\:mt-0{
+    margin-top: 0px;
+  }
+
   .xl\:grid-cols-5{
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
