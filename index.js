@@ -1,11 +1,15 @@
-const burger = document.querySelector('#burger');
-const menu = document.querySelector('#menu');
+let valueDisplays = document.querySelectorAll(".num");
+let interval = 1500;
 
-burger.addEventListener('click', ()=>{
-    if(menu.classList.contains('hidden')){
-        menu.classList.remove('hidden');
-    }
-    else{
-        menu.classList.add('hidden');
-    }
+valueDisplays.forEach((valueDisplay) =>{
+    let starValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+    let duration = Math.floor(interval/endValue);
+    let counter = setInterval(function (){
+        starValue +=1;
+        valueDisplay.textContent=starValue;
+        if(starValue == endValue){
+            clearInterval(counter);
+        }
+    },duration)
 });
