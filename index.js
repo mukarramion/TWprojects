@@ -1,4 +1,4 @@
-console.log("hi")
+
 let valueDisplays = document.querySelectorAll(".num");
 let interval = 1500;
 
@@ -63,6 +63,6 @@ getcars().then(data => {
     });
 });
 
-console.log('test');
+
 
 
