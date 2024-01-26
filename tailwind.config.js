@@ -8,7 +8,8 @@ module.exports = {
         secondary: {
           100: '#E2E2D5',
           200: '#888883'
-        }
+        },
+        transparentBG:"rgba(255, 99, 99,0.1)"
       },
       fontFamily:{
         body:['Nunito']
