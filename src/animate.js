@@ -18,3 +18,5 @@ const observe = new IntersectionObserver(entries =>{
 
   observe.observe(document.querySelector('.cars-wrapper'))
   observe.observe(document.querySelector('.link-wrapper'))
+  observe.observe(document.querySelector('.chooseus-wrapper'))
+  
