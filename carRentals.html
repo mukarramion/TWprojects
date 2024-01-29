@@ -38,8 +38,6 @@
                                 href="#">Book Now</a></li>
                         <li class="md:mx-4 md:my-2 md:px-2 hover:text-primary transition ease-linear duration-500"><a
                                 href="#">About</a></li>
-                        <li class="md:mx-4 md:my-2 md:px-2 hover:text-primary transition ease-linear duration-500"><a
-                                href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="order-2 md:order-3">
@@ -313,9 +311,9 @@
                         <p class="w-full md:w-2/3 text-gray-400">Join Us On This Exciting Journey! Book Your Freedom Car
                             Today And Take The Road Less Traveled!</p>
                         <div class="w-44 pt-6 md:pt-0">
-                            <a
+                            <button onclick="showDialog()"
                                 class="bg-primary justify-center text-center rounded-lg shadow px-10 py-3 flex items-center hover:cursor-pointer hover:bg-white hover:border hover:border-primary hover:text-primary transition ease-linear duration-500">Contact
-                                US</a>
+                                US</button>
                         </div>
                     </div>
                     <div class="flex flex-col mt-10">
@@ -325,6 +323,83 @@
                 </div>
             </div>
         </section>
+    </div>
+    <div id="dialog" onclick="hideDialog()" class=" fixed left-0 top-0 bg-black bg-opacity-20 w-screen h-screen justify-center items-center z-40 hidden opacity-0 transition-opacity duration-500">
+        <div onclick="event.stopImmediatePropagation()" class=" bg-black rounded-3xl shadow-md p-8 w-[80%] md:w-[550px]">
+            <div class="flex justify-end items-center">
+                <svg class="text-white w-10 h-10 hover:text-primary transition ease-linear duration-300" onclick="hideDialog()" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+                  </svg>
+            </div>
+            <form action="" method="POST">
+                <div class="mb-5">
+                <label
+                    for="name"
+                    class="mb-3 block text-base font-medium text-white"
+                >
+                    Full Name
+                </label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Full Name"
+                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-primary focus:shadow-md"
+                />
+                </div>
+                <div class="mb-5">
+                <label
+                    for="email"
+                    class="mb-3 block text-base font-medium text-white"
+                >
+                    Email Address
+                </label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="example@domain.com"
+                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-primary focus:shadow-md"
+                />
+                </div>
+                <div class="mb-5">
+                <label
+                    for="subject"
+                    class="mb-3 block text-base font-medium text-white"
+                >
+                    Subject
+                </label>
+                <input
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    placeholder="Enter your subject"
+                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-primary focus:shadow-md"
+                />
+                </div>
+                <div class="mb-5">
+                <label
+                    for="message"
+                    class="mb-3 block text-base font-medium text-white"
+                >
+                    Message
+                </label>
+                <textarea
+                    rows="4"
+                    name="message"
+                    id="message"
+                    placeholder="Type your message"
+                    class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-primary focus:shadow-md"
+                ></textarea>
+                </div>
+                <div>
+                <button
+                    class="text-white bg-primary justify-center text-center rounded-lg shadow px-10 py-3 flex items-center hover:cursor-pointer hover:bg-white hover:border hover:border-primary hover:text-primary transition ease-linear duration-500">
+                    Submit
+                </button>
+                </div>
+            </form>
+        </div>
     </div>
     <template id="car-template">
         <div class="group card hover:shadow-2xl transition ease-linear duration-500 w-80">
@@ -336,13 +411,32 @@
                 </h2>
                 <p class="text-gray-600 mb-2 seating-capacity"></p>
                 <p class="text-gray-800 mb-4 rental-rate"></p>
-                <a href="contact.html"
+                <button onclick="showDialog()"
                     class="bg-primary rounded px-4 py-2 text-white hover:cursor-pointer hover:bg-white hover:border hover:border-primary hover:text-primary transition ease-linear duration-300">Enquiry
-                    Now</a>
+                    Now</button>
             </div>
         </div>
     </template>
     <script src="index.js"></script>
+    <script>
+        function showDialog(){
+            let dialog = document.getElementById('dialog');
+            dialog.classList.remove('hidden');
+            dialog.classList.add('flex');
+            setTimeout( ()=>{
+                dialog.classList.add('opacity-100');
+            },100);
+        }
+        function hideDialog(){
+            let dialog = document.getElementById('dialog');
+            dialog.classList.add('opacity-0');
+            dialog.classList.remove('opacity-100');
+            setTimeout( ()=>{
+                dialog.classList.add('hidden');
+                dialog.classList.remove('flex');
+            },500);
+        }
+    </script>
 </body>
 
 </html>
