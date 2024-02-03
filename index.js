@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
+    function showDialog() {
+        let dialog = document.getElementById('dialog');
+        dialog.classList.remove('hidden');
+        dialog.classList.add('flex');
+        setTimeout(() => {
+            dialog.classList.add('opacity-100');
+        }, 100);
+    }
+    function hideDialog() {
+        let dialog = document.getElementById('dialog');
+        dialog.classList.add('opacity-0');
+        dialog.classList.remove('opacity-100');
+        setTimeout(() => {
+            dialog.classList.add('hidden');
+            dialog.classList.remove('flex');
+        }, 500);
+    }
     let valueDisplays = document.querySelectorAll(".num");
     let interval = 1500;
    
